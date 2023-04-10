@@ -93,9 +93,8 @@
       </section>
       <section>
         <div class="p-8 md:p-12 lg:px-12" x-data="{ status: 'Copy' }">
-          <a
-            class="relative flex flex-col-reverse sm:flex-row items-start justify-between rounded-xl border border-gray-100 p-4 shadow-xl sm:p-6 lg:p-8"
-            href="#"
+          <div
+            class="relative flex flex-col-reverse sm:flex-row items-start justify-between rounded-xl border border-gray-100 p-4 shadow-xl sm:p-6 lg:p-8 cursor-pointer"
             @click="$clipboard(result); status = 'Copied!'; setTimeout(() => { status = 'Copy'; }, 2000)"
           >
             <div class="pt-4 text-gray-600">
@@ -103,11 +102,11 @@
             </div>
 
             <span
-              class="rounded-full bg-green-100 px-3 py-1.5 text-xs font-medium text-green-600"
+              class="rounded-full bg-gray-200 px-3 py-1.5 text-xs font-medium text-gray-900"
               x-text="status"
             >
             </span>
-          </a>
+          </div>
         </div>
 
       </section>
